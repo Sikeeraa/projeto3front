@@ -1,5 +1,3 @@
-
-
 window.onload = function(){
 
     const intro=document.getElementById("inicio");
@@ -10,9 +8,20 @@ window.onload = function(){
             intro.style.display="none";
             content.classList.remove("hidden");
             content.classList.add("efeito-in");
-        }1000)
+        },1000)
     },3000)
 }
+//MENU HAMBURGUER
+    document.addEventListener('DOMContentLoaded',()=>{
+        const menuIcone= document.getElementById("menu-icone");
+        const navMenu=document.querySelector("nav");
+        if(menuIcone && navMenu){
+            menuIcone.onclick=()=>{
+                navMenu.classList.toggle("active");
+                menuIcone.classList.toggle("open");
+            }
+        }
+})
 
 
 
